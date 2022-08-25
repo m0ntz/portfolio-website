@@ -1,0 +1,268 @@
+/*
+Colors used
+
+Text Color (Dark Gray): #2b2b2b;
+Primary Color (Magenta): #c3195d;
+Secondary Color (Dark Magenta):  #680747;
+Tertiary Color (Dark Violet): #370D5E;
+Background Color (Light gray): #D4D4D4
+ */
+
+:root {
+  --primary-color: #c3195d;
+  --secondary-color: #680747;
+  --tertiary-color: #370d5e;
+  --text-color: #2b2b2b;
+  --background-color: #d4d4d4;
+  --visited-link-color: #5c5470;
+  --padding: 15px;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 15px;
+}
+
+.page-header {
+  display: flex;
+  padding: var(--padding);
+  border-bottom: 1px solid var(--background-color);
+  margin-bottom: 80px;
+}
+
+.page-header__item {
+  flex: 0 1 150px;
+}
+/*logo*/
+
+.page-header__item:last-child {
+  text-align: right;
+  flex-grow: 1;
+}
+/*navigation list*/
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.profile__portrait {
+  float: left;
+  width: 300px;
+  margin-right: 40px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.profile__text {
+  width: 750px;
+}
+
+a {
+  color: var(--tertiary-color);
+}
+a:visited {
+  color: var(--visited-link-color);
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+button,
+.button {
+  font-family: inherit;
+  border: none;
+  background-color: blueviolet;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  margin: 20px;
+  display: inline-block;
+  transition-duration: 0.2s;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.navigation-list__item--active {
+  text-decoration: none;
+  font-weight: bold;
+}
+.navigation-list__item {
+  color: var(--primary-color);
+}
+
+.navigation-list__item:visited {
+  color: var(--primary-color);
+}
+
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* start grid fallback */
+.grid__item {
+  display: inline-block;
+  width: 33%;
+}
+/* end grid fallback */
+
+@supports (display: grid) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+  .grid__item {
+    background-color: var(--background-color);
+    padding: var(--padding);
+    width: auto;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .page-header__item {
+    flex-shrink: 0 1 80px;
+    max-inline-size: 20%;
+    block-size: auto;
+  }
+  .navigation-list li {
+    margin-right: 15px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    /*grid-gap: 10px; We passed this one that was shared to the one at the bottom */
+  }
+  .profile__portrait {
+    float: none;
+    margin: 0 auto;
+    display: block;
+    width: 80%;
+  }
+  .profile__text {
+    max-width: 90%;
+  }
+  h1,
+  h2 {
+    text-align: center;
+  }
+
+  table {
+    font-size: smaller;
+  }
+}
+
+@media all and (min-width: 501px) and (max-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    /*grid-gap: 10px; We passed this one that was shared to the one at the bottom, 
+    *because we only want to adapt the size of the grid depending on the screen size */
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+/*animations*/
+
+@keyframes color-change {
+  from {
+    fill: #edc655;
+  }
+  to {
+    fill: #f76414;
+  }
+}
+
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+/* We want the cloud to move horizontally only, so we keep the vertical values (50px)
+* and modify only the horizontal) */
+
+.cloud-front {
+  animation-duration: 30s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
