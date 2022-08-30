@@ -169,7 +169,7 @@ button:focus,
 
 @media all and (max-width: 500px) {
   .page-header__item {
-    flex-shrink: 0 1 80px;
+    flex: 0 1 80px;
     max-inline-size: 20%;
     block-size: auto;
   }
@@ -202,7 +202,7 @@ button:focus,
 @media all and (min-width: 501px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
-    /*grid-gap: 10px; We passed this one that was shared to the one at the bottom, 
+    /*grid-gap: 10px; We passed this one that was shared to the one at the bottom,
     *because we only want to adapt the size of the grid depending on the screen size */
   }
 }
