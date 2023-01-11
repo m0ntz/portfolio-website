@@ -145,6 +145,11 @@ button:focus,
   color: #c3195d;
 }
 
+.project-img {
+  width: 350px;
+  height: 250px;
+}
+
 .page-footer {
   clear: both;
   display: -webkit-box;
