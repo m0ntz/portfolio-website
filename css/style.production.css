@@ -25,6 +25,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   margin: 15px;
+  background-color: #22223b;
 }
 
 .page-header {
@@ -63,7 +64,7 @@ body {
 h1 {
   font-size: 30px;
   font-weight: 700;
-  color: #680747;
+  color: #c9ada7;
 }
 
 h2 {
@@ -75,6 +76,10 @@ h2 {
 h3 {
   font-size: 18px;
   font-weight: 400;
+}
+
+p {
+  color: #f2e9e4;
 }
 
 .profile {
@@ -98,7 +103,7 @@ a {
   color: #370d5e;
 }
 a:visited {
-  color: #5c5470;
+  color: #e56b6f;
 }
 
 a:hover,
@@ -111,7 +116,7 @@ button,
 .button {
   font-family: inherit;
   border: none;
-  background-color: blueviolet;
+  background-color: #ef476f;
   font-size: 16px;
   color: white;
   text-decoration: none;
@@ -181,7 +186,7 @@ button:focus,
   }
 
   .grid__item {
-    background-color: #d4d4d4;
+    background-color: #9a8c98;
     padding: 15px;
     width: auto;
   }
