@@ -37,20 +37,22 @@ body {
   margin-bottom: 80px;
 }
 
+/*logo*/
 .page-header__item {
+  height: 100px;
+  width: 200px;
   -webkit-box-flex: 0;
   -ms-flex: 0 1 200px;
-  flex: 0 1 200px;
+  flex: 0 1 100px;
 }
-/*logo*/
 
+/*navigation list*/
 .page-header__item:last-child {
   text-align: right;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
-/*navigation list*/
 
 .navigation-list {
   list-style-type: none;
@@ -64,13 +66,14 @@ body {
 h1 {
   font-size: 30px;
   font-weight: 700;
-  color: #c9ada7;
+  color: #e56b6f;
+  text-align: center;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
-  color: #c3195d;
+  color: #c9ada7;
 }
 
 h3 {
@@ -97,10 +100,18 @@ p {
 
 .profile__text {
   width: 750px;
+  margin: 0 auto;
+}
+
+.about_pic {
+  width: 250px;
+  height: 350px;
+  margin: 0 auto;
+  display: block;
 }
 
 a {
-  color: #370d5e;
+  color: #eaac8b;
 }
 a:visited {
   color: #e56b6f;
@@ -143,16 +154,32 @@ button:focus,
   font-weight: bold;
 }
 .navigation-list__item {
-  color: #c3195d;
+  color: #9a8c98;
+  text-decoration: none;
 }
 
 .navigation-list__item:visited {
-  color: #c3195d;
+  color: #9a8c98;
 }
 
 .project-img {
   width: 350px;
   height: 250px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+
+.grid__item h2 {
+  color: #22223b;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.project_long_pic {
+  margin: 0 auto;
+  display: block;
 }
 
 .page-footer {
@@ -167,6 +194,15 @@ button:focus,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.fa-brands {
+  color: #c9ada7;
+  font-size: 30px;
+}
+
+.social-media-link {
+  text-decoration: none;
 }
 
 /* start grid fallback */
@@ -189,6 +225,7 @@ button:focus,
     background-color: #9a8c98;
     padding: 15px;
     width: auto;
+    border-radius: 13px;
   }
 }
 
@@ -235,102 +272,4 @@ button:focus,
   h1 {
     font-size: 22px;
   }
-}
-
-/*animations*/
-
-@-webkit-keyframes color-change {
-  from {
-    fill: #edc655;
-  }
-  to {
-    fill: #f76414;
-  }
-}
-
-@keyframes color-change {
-  from {
-    fill: #edc655;
-  }
-  to {
-    fill: #f76414;
-  }
-}
-
-.sun {
-  -webkit-animation-duration: 4s;
-  animation-duration: 4s;
-  -webkit-animation-name: color-change;
-  animation-name: color-change;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-}
-
-@-webkit-keyframes cloud-move {
-  from {
-    -webkit-transform: translate(0, 50px);
-    transform: translate(0, 50px);
-  }
-  to {
-    -webkit-transform: translate(200px, 50px);
-    transform: translate(200px, 50px);
-  }
-}
-
-@keyframes cloud-move {
-  from {
-    -webkit-transform: translate(0, 50px);
-    transform: translate(0, 50px);
-  }
-  to {
-    -webkit-transform: translate(200px, 50px);
-    transform: translate(200px, 50px);
-  }
-}
-
-/* We want the cloud to move horizontally only, so we keep the vertical values (50px)
-* and modify only the horizontal) */
-
-.cloud-front {
-  -webkit-animation-duration: 30s;
-  animation-duration: 30s;
-  -webkit-animation-name: cloud-move;
-  animation-name: cloud-move;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-}
-
-@-webkit-keyframes cloud-move-reverse {
-  from {
-    -webkit-transform: translate(446px, 48px);
-    transform: translate(446px, 48px);
-  }
-  to {
-    -webkit-transform: translate(100px, 48px);
-    transform: translate(100px, 48px);
-  }
-}
-
-@keyframes cloud-move-reverse {
-  from {
-    -webkit-transform: translate(446px, 48px);
-    transform: translate(446px, 48px);
-  }
-  to {
-    -webkit-transform: translate(100px, 48px);
-    transform: translate(100px, 48px);
-  }
-}
-
-.cloud-back {
-  -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
-  animation: 34s cloud-move-reverse infinite alternate linear;
 }
