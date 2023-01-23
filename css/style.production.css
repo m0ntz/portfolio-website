@@ -188,7 +188,8 @@ button,
 .button {
   font-family: inherit;
   border: none;
-  background-color: #ef476f;
+  background-color: #22223b;
+  /* background-color: #ef476f; */
   font-size: 16px;
   color: white;
   text-decoration: none;
@@ -284,7 +285,7 @@ button:focus,
   }
 }
 
-@media all and (max-width: 750px) {
+@media all and (max-width: 500px) {
   .navigation-list li {
     margin-right: 15px;
   }
@@ -367,23 +368,24 @@ button:focus,
   }
 }
 
-@media all and (min-width: px) and (max-width: 750px) {
+@media all and (min-width: 501px) and (max-width: 850px) {
   .grid {
     -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 5px;
+    margin-left: 10px;
   }
 
   .grid__item {
     max-width: 90%;
-    max-height: 65%;
+    max-height: 88%;
   }
 
   .favflix__item {
     display: block;
     margin: 0 auto;
-    max-width: 88%;
-    max-height: 98%;
+    max-width: 92%;
+    max-height: 88%;
   }
 
   .grid__item p {
@@ -436,11 +438,24 @@ button:focus,
   }
 }
 
-@media all and (max-width: 750px) {
+/* @media all and (min-width: 751px) {
+  .navbar {
+    flex: 0 1 100px;
+    display: flex;
+    background-color: #2b2d42;
+    font-size: 20px;
+    padding-bottom: 0;
+    margin-bottom: 100px;
+    width: 100%;
+    flex-grow: 1;
+    position: relative;
+  }
+} */
+
+/* @media all and (max-width: 750px) {
   /* .grid {
     grid-gap: 10px;
   } */
-  h1 {
+/* h1 {
     font-size: 22px;
-  }
-}
+  } */
